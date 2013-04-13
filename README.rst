@@ -1,13 +1,15 @@
-~~~~~~~~~~~~~~~~~~~
-Carapace SSH Server
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+Carapace Shell Server
+~~~~~~~~~~~~~~~~~~~~~
 
 An unusual and beautiful shell that you can put things in.
 
 .. image:: resources/logos/carapace-4.png
 
 Carapace is for those who want to be able to securely (SSH) log into a remote
-service running a custom shell of the one's own design.
+service running a custom shell of the one's own design. By default, a Python
+shell is provided; however, the shells that one could create and access via SSH
+with Carapace are limited only by your imagination. Yes, that was a dare.
 
 Carapace is built using Twisted (Python).
 
@@ -23,14 +25,14 @@ Carapace provides, out of the box, the following:
 
 * configurable banner/MOTD
 
-* enable's server admins to templatize their banner (e.g., changing the "help" based on
-  interpreter type)
+* enable's server admins to templatize their banner (e.g., changing the "help"
+  based on interpreter type)
 
 * provides an easy means of generating server keys (and then uses them
   automatically)
 
-* by default, it uses a custom directory for checking authorized SSH keys, but can
-  also use ``$HOME`` for locating authorized keys
+* by default, it uses a custom directory for checking authorized SSH keys, but
+can also use ``$HOME`` for locating authorized keys
 
 * can import SSH keys from Launchpad.net
 
