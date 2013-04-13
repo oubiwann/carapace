@@ -1,5 +1,5 @@
-from dreamssh import config
-from dreamssh.sdk import registry
+from carapace import config
+from carapace.sdk import registry
 
 
 config.updateConfig()

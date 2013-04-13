@@ -3,7 +3,7 @@ import base64, binascii
 from twisted.conch.checkers import SSHPublicKeyDatabase
 from twisted.python.filepath import FilePath
 
-from dreamssh.sdk import registry
+from carapace.sdk import registry
 
 
 config = registry.getConfig()

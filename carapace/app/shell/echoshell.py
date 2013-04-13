@@ -1,7 +1,7 @@
 from zope.interface import implements
 
-from dreamssh.app.shell import base
-from dreamssh.sdk import interfaces, registry
+from carapace.app.shell import base
+from carapace.sdk import interfaces, registry
 
 
 config = registry.getConfig()

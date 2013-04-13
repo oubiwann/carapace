@@ -2,8 +2,8 @@ import os
 
 from twisted.conch.ssh.keys import Key
 
-from dreamssh import config
-from dreamssh.sdk import exceptions
+from carapace import config
+from carapace.sdk import exceptions
 
 
 def _getKey(path):

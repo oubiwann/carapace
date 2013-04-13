@@ -1,7 +1,7 @@
 from twisted.conch import interfaces, manhole, manhole_ssh
 from twisted.python import components, log
 
-from dreamssh.sdk import exceptions, registry
+from carapace.sdk import exceptions, registry
 
 
 config = registry.getConfig()

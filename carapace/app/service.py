@@ -3,9 +3,9 @@ import sys
 from twisted.application import service, internet
 from twisted.python import usage
 
-from dreamssh import config, meta
-from dreamssh.app.shell.service import getShellFactory
-from dreamssh.sdk import const, exceptions, scripts
+from carapace import config, meta
+from carapace.app.shell.service import getShellFactory
+from carapace.sdk import const, exceptions, scripts
 
 
 class SubCommandOptions(usage.Options):

@@ -1,7 +1,7 @@
 from zope.component import getGlobalSiteManager, getUtility
 from zope.interface.interfaces import ComponentLookupError
 
-from dreamssh.sdk import interfaces
+from carapace.sdk import interfaces
 
 
 def getConfig():

@@ -10,8 +10,8 @@ Bugs
 * Error when generating a config::
 
     $ make generate-config
-    rm -rf ~/.dreamssh/config.ini
-    python -c "from dreamssh import config; config.writeDefaults();"
+    rm -rf ~/.carapace/config.ini
+    python -c "from carapace import config; config.writeDefaults();"
     Traceback (most recent call last):
       File "<string>", line 1, in <module>
       AttributeError: 'module' object has no attribute 'writeDefaults'
@@ -35,7 +35,7 @@ Tasks
   * maybe subdirs, divided by user?
 
 * Maybe move commandAPI from shell.base.MOTDColoredManhole to
-  CarapiceInterpreter?
+  CarapaceInterpreter?
 
 * Add support for dynamic prompts
 

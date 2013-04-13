@@ -1,32 +1,32 @@
-PROJ := dreamssh
-LIB := dreamssh
-GITHUB_REPO := github.com:dreamhost/$(PROJ).git
+PROJ := carapace
+LIB := carapace
+GITHUB_REPO := github.com:oubiwann/$(PROJ).git
 PKG_NAME := $(PROJ)
 TMP_FILE ?= /tmp/MSG
 VIRT_DIR ?= .venv
 
 keygen:
-	@python -c "from dreamssh import app;from dreamssh.sdk import scripts;scripts.KeyGen()"
+	@python -c "from carapace import app;from carapace.sdk import scripts;scripts.KeyGen()"
 
 run:
-	twistd -n dreamssh
+	twistd -n carapace
 
 daemon:
-	twistd dreamssh
+	twistd carapace
 
 shell:
-	@python -c "from dreamssh import app;from dreamssh.sdk import scripts;scripts.ConnectToShell()"
+	@python -c "from carapace import app;from carapace.sdk import scripts;scripts.ConnectToShell()"
 
 stop:
-	@python -c "from dreamssh import app;from dreamssh.sdk import scripts;scripts.StopDaemon()"
+	@python -c "from carapace import app;from carapace.sdk import scripts;scripts.StopDaemon()"
 
 generate-config:
-	python -c "from dreamssh import app;from dreamssh.sdk import scripts;scripts.GenerateConfig();"
+	python -c "from carapace import app;from carapace.sdk import scripts;scripts.GenerateConfig();"
 
 import-keys: GAME_USER ?= 
 import-keys: LP_USER ?=
 import-keys:
-	python -c "from dreamssh import app;from dreamssh.sdk import scripts;\
+	python -c "from carapace import app;from carapace.sdk import scripts;\
 	scripts.ImportKeys('$(GAME_USER)', '$(LP_USER)');"
 
 run-test:
@@ -139,7 +139,7 @@ install:
 	sudo pip install .
 
 uninstall:
-	sudo pip uninstall dreamssh
+	sudo pip uninstall carapace
 
 register: clean
 	python setup.py register

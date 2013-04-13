@@ -1,20 +1,20 @@
 from twisted.cred import portal
 from twisted.conch import manhole_ssh
 
-from dreamssh.app import cred
-from dreamssh.sdk import const
-from dreamssh.util import ssh as util
+from carapace.app import cred
+from carapace.sdk import const
+from carapace.util import ssh as util
 
 
 def portalFactory(interpreterType, namespace):
     if interpreterType == const.PYTHON:
-        from dreamssh.app.shell import pythonshell
+        from carapace.app.shell import pythonshell
         realm = pythonshell.PythonTerminalRealm(namespace)
     elif interpreterType == const.SHARED_PYTHON:
-        from dreamssh.app.shell import pythonshell
+        from carapace.app.shell import pythonshell
         realm = pythonshell.SharedPythonTerminalRealm(namespace)
     elif interpreterType == const.ECHO:
-        from dreamssh.app.shell import echoshell
+        from carapace.app.shell import echoshell
         realm = echoshell.EchoTerminalRealm(namespace)
     return portal.Portal(realm)
 

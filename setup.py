@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
-from dreamssh import meta
-from dreamssh.util import dist
+from carapace import meta
+from carapace.util import dist
 
 
 setup(
@@ -15,7 +15,7 @@ setup(
     license=meta.license,
     packages=find_packages() + ["twisted.plugins"],
     package_data={
-        "twisted": ['plugins/dreamssh.py']
+        "twisted": ['plugins/carapace.py']
         },
     install_requires=meta.requires,
     zip_safe=False

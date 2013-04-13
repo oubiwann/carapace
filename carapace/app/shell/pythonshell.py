@@ -6,8 +6,8 @@ from zope.interface import implements
 
 from twisted.conch.manhole import ManholeInterpreter
 
-from dreamssh.app.shell import base
-from dreamssh.sdk import exceptions, interfaces, registry
+from carapace.app.shell import base
+from carapace.sdk import exceptions, interfaces, registry
 
 
 config = registry.getConfig()

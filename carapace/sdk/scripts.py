@@ -6,7 +6,7 @@ from twisted.internet import reactor
 from twisted.python.filepath import FilePath
 from twisted.web import client
 
-from dreamssh.sdk import registry
+from carapace.sdk import registry
 
 
 config = registry.getConfig()
