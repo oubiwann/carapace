@@ -4,9 +4,6 @@ TODO
 Bugs
 ----
 
-* When executing the "clear" shell command, the new screen has a newline at the
-  top
-
 * Error when generating a config::
 
     $ make generate-config
@@ -16,9 +13,6 @@ Bugs
       File "<string>", line 1, in <module>
       AttributeError: 'module' object has no attribute 'writeDefaults'
       make: *** [generate-config] Error 1
-
-* Currently when the config.ini usesystemkeys is set to False (the default),
-  one cannot log into the shell.
 
 Tasks
 -----
