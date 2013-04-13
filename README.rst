@@ -1,6 +1,6 @@
-~~~~~~~~~~~~~~~
-Carapace Server
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+Carapace SSH Server
+~~~~~~~~~~~~~~~~~~~
 
 An unusual and beautiful shell that you can put things in.
 
