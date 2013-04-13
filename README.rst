@@ -153,14 +153,15 @@ You are greeted with something that looks like this::
     :
     : Welcome to
     :_________
-    :\_   ___ \_____ ____________  ______   ____  ____
-    :/    \  \/\__  \\_  __ \__  \ \____ \_/ ___\/ __ \
-    :\     \____/ __ \|  | \// __ \|  |_> >  \__\  ___/
-    : \______  (____  /__|  (____  /   __/ \___  >___  >
-    :         \/     \/           \/|__|        \/    \/
+    :\_   ___ \_____ ____________  ___________    ____  ____
+    :/    \  \/\__  \\_  __ \__  \ \____ \__  \ _/ ___\/ __ \
+    :\     \____/ __ \|  | \// __ \|  |_> > __ \\  \__\  ___/
+    : \______  (____  /__|  (____  /   __(____  /\___  >___  >
+    :         \/     \/           \/|__|       \/     \/    \/
     :
-    : You have logged into a Carapace Server.
+    : You have logged into a Carapace Shell Server.
     : Type 'ls()' or 'dir()' to see the objects in the current namespace.
+    : Use help(...) to get API docs for available objects.
     :
     : Enjoy!
     :
@@ -209,13 +210,13 @@ You are greeted instead with this::
     :
     : Welcome to
     :_________
-    :\_   ___ \_____ ____________  ______   ____  ____
-    :/    \  \/\__  \\_  __ \__  \ \____ \_/ ___\/ __ \
-    :\     \____/ __ \|  | \// __ \|  |_> >  \__\  ___/
-    : \______  (____  /__|  (____  /   __/ \___  >___  >
-    :         \/     \/           \/|__|        \/    \/
+    :\_   ___ \_____ ____________  ___________    ____  ____
+    :/    \  \/\__  \\_  __ \__  \ \____ \__  \ _/ ___\/ __ \
+    :\     \____/ __ \|  | \// __ \|  |_> > __ \\  \__\  ___/
+    : \______  (____  /__|  (____  /   __(____  /\___  >___  >
+    :         \/     \/           \/|__|       \/     \/    \/
     :
-    : You have logged into a Carapace SSH Server.
+    : You have logged into a Carapace Shell Server.
     : This shell has no commands; it simply returns what you type.
     :
     : Enjoy!
