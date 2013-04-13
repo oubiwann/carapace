@@ -83,6 +83,7 @@ following::
 
     $ sudo pip install pyasn1
     $ sudo pip install PyCrypto
+    $ sudo pip install zope.component
     $ sudo pip install twisted
 
 Once the dependencies are installed, you'll need to generate the keys for use
