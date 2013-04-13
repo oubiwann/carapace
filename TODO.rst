@@ -35,7 +35,7 @@ Tasks
   * maybe subdirs, divided by user?
 
 * Maybe move commandAPI from shell.base.MOTDColoredManhole to
-  DreamSSHInterpreter?
+  CarapiceInterpreter?
 
 * Add support for dynamic prompts
 

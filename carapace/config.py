@@ -45,7 +45,7 @@ ssh.banner = """:
 : \______  (____  /__|  (____  /   __/ \___  >___  >
 :         \/     \/           \/|__|        \/    \/
 :
-: You have logged into a DreamSSH Server.
+: You have logged into a Carapace SSH Server.
 : {{HELP}}
 :
 : Enjoy!

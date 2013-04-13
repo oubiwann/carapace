@@ -1,11 +1,11 @@
-display_name = "DreamSSH"
-library_name = "dreamssh"
+display_name = "Carapace SSH"
+library_name = "carapace"
 version = "0.3-dev"
 author = "Duncan McGreggor"
-author_email = "dev-community@dreamhost.com"
+author_email = "duncan@cogitat.io"
 license = "MIT"
-url = "http://github.com/dreamhost/dreamssh"
-description = "DreamSSH Server"
+url = "http://github.com/oubiwann/carapace"
+description = "Carapace SSH Server"
 long_description = ("A highly configurable pure-Python, Twisted-based "
                     "SSH Server")
 requires = [
