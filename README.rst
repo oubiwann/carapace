@@ -1,6 +1,7 @@
 ~~~~~~~~~~~~~~~
-DreamSSH Server
+Carapace Server
 ~~~~~~~~~~~~~~~
+ .. image:: resources/logos/carapace-4.png
 
 Features
 ========
@@ -8,7 +9,7 @@ Features
 *What does this give me, over and above the default* ``manhole`` *capabilities
 of* ``twistd``?
 
-DreamSSH provides, out of the box, the following:
+Carapace provides, out of the box, the following:
 
 * provides an easy mechanism for creating your own shell
 
@@ -43,7 +44,7 @@ Install
 You can install from PyPI, which will give you the latest released (hopefully
 stable) version of the software::
 
-    $ sudo pip install dreamssh
+    $ sudo pip install carapce
 
 If you like living on the edge, you can install from the github ``master``
 branch::
@@ -58,18 +59,18 @@ Finally, you can just get the code itself::
 Dependencies
 =============
 
-Storage in DreamSSH is handled by MongoDB, so you will need to have this
+Storage in Carapace is handled by MongoDB, so you will need to have this
 software installed on your system. See the following for more information:
 
 * http://docs.mongodb.org/master/installation/
 
-If you used ``pip`` to install DreamSSH, then you will have most of the
+If you used ``pip`` to install Carapace, then you will have most of the
 necessary libraries installed. TxMongo doesn't have a PyPI download yet, so
 you'll need to install it manually::
 
     $ sudo pip install https://github.com/dreamhost/mongo-async-python-driver/zipball/master
 
-If you didn't use ``pip`` to install DreamSSH, you will also need to do the
+If you didn't use ``pip`` to install Carapace, you will also need to do the
 following::
 
     $ sudo pip install pyasn1
@@ -85,7 +86,7 @@ by the server::
 Running
 =======
 
-Once you have DreamSSH installed, interacting with the server is as easy as the
+Once you have Carapace installed, interacting with the server is as easy as the
 following::
 
     $ twistd dreamssh
@@ -107,7 +108,7 @@ When you're ready to shut it down::
 
     $ twistd dreamssh stop
 
-If you'd like to regenerate the config file for DreamSSH, you can do so with
+If you'd like to regenerate the config file for Carapace, you can do so with
 the following command::
 
     $ twistd dreamssh generate-config
@@ -145,7 +146,7 @@ You are greeted with something that looks like this::
     :/_____/ /_/    \___/\__,_/ /_/ /_/ /_//____/ /____/ /_/ /_/
     :
     :
-    : You have logged into a DreamSSH Server.
+    : You have logged into a Carapace Server.
     : Type 'ls()' or 'dir()' to see the objects in the current namespace.
     :
     : Enjoy!
@@ -213,14 +214,14 @@ Revision History
 * modular configuration using zope.components
 
 * user ssh keys that don't require a user have an account on the machine where
-  DreamSSH is running
+  Carapace is running
 
 * a script class and make target for importing a user's public keys from
   Launchpad.net
 
 * a thorough code reorganization
 
-* provide a DreamSSH sdk subpackage for use by other projects
+* provide a Carapace sdk subpackage for use by other projects
 
 
 0.1
