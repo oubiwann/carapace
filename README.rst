@@ -1,7 +1,15 @@
 ~~~~~~~~~~~~~~~
 Carapace Server
 ~~~~~~~~~~~~~~~
- .. image:: resources/logos/carapace-4.png
+
+An unusual and beautiful shell that you can put things in.
+
+.. image:: resources/logos/carapace-4.png
+
+Carapace is for those who want to be able to securely (SSH) log into a remote
+service running a custom shell of the one's own design.
+
+Carapace is built using Twisted (Python).
 
 Features
 ========
@@ -49,11 +57,11 @@ stable) version of the software::
 If you like living on the edge, you can install from the github ``master``
 branch::
 
-    $ sudo pip install https://github.com/dreamhost/dreamssh/zipball/master
+    $ sudo pip install https://github.com/oubiwann/carapace/zipball/master
 
 Finally, you can just get the code itself::
 
-    $ git clone https://github.com/dreamhost/dreamssh.git
+    $ git clone https://github.com/oubiwann/carapace.git
 
 
 Dependencies
@@ -68,7 +76,7 @@ If you used ``pip`` to install Carapace, then you will have most of the
 necessary libraries installed. TxMongo doesn't have a PyPI download yet, so
 you'll need to install it manually::
 
-    $ sudo pip install https://github.com/dreamhost/mongo-async-python-driver/zipball/master
+    $ sudo pip install https://github.com/oubiwann/txmongo/zipball/master
 
 If you didn't use ``pip`` to install Carapace, you will also need to do the
 following::
@@ -80,7 +88,7 @@ following::
 Once the dependencies are installed, you'll need to generate the keys for use
 by the server::
 
-    $ twistd dreamssh keygen
+    $ twistd carapace keygen
 
 
 Running
@@ -89,31 +97,31 @@ Running
 Once you have Carapace installed, interacting with the server is as easy as the
 following::
 
-    $ twistd dreamssh
+    $ twistd carapace
 
 That will run in daemonized mode. If you'd like to run it in the foreground and
 watch the log output to stdout, just do::
 
-    $ twistd -n dreamssh
+    $ twistd -n carapace
 
 To log into the shell, use this command::
 
-    $ twistd dreamssh shell
+    $ twistd carapace shell
 
 If you'd like to try out the alternate "toy" shell::
 
-    $ twistd dreamssh --interpreter=echo
+    $ twistd carapace --interpreter=echo
 
 When you're ready to shut it down::
 
-    $ twistd dreamssh stop
+    $ twistd carapace stop
 
 If you'd like to regenerate the config file for Carapace, you can do so with
 the following command::
 
-    $ twistd dreamssh generate-config
+    $ twistd carapace generate-config
 
-The old config will be saved in the ``~/.dreamssh`` directory with a timestamp
+The old config will be saved in the ``~/.carapace`` directory with a timestamp
 appended to its filename.
 
 For those who have a ``clone`` of the git repo, there are development
@@ -131,7 +139,7 @@ Using
 
 When you log into the Python shell::
 
-    $ twistd dreamssh shell
+    $ twistd carapace shell
 
 You are greeted with something that looks like this::
 
@@ -158,22 +166,22 @@ objects with the following command::
 
     :>> ls()
         __builtins__ - data
-        app          - dreamssh.shell.pythonshell.CommandAPI.app
-        banner       - dreamssh.shell.pythonshell.CommandAPI.banner
-        clear        - dreamssh.shell.pythonshell.CommandAPI.clear
-        config       - dreamssh.config
-        exit         - dreamssh.shell.pythonshell.CommandAPI.exit
-        info         - dreamssh.shell.pythonshell.CommandAPI.info
-        ls           - dreamssh.shell.pythonshell.CommandAPI.ls
+        app          - carapace.shell.pythonshell.CommandAPI.app
+        banner       - carapace.shell.pythonshell.CommandAPI.banner
+        clear        - carapace.shell.pythonshell.CommandAPI.clear
+        config       - carapace.config
+        exit         - carapace.shell.pythonshell.CommandAPI.exit
+        info         - carapace.shell.pythonshell.CommandAPI.info
+        ls           - carapace.shell.pythonshell.CommandAPI.ls
         os           - os
         pprint       - pprint.pprint
-        quit         - dreamssh.shell.pythonshell.CommandAPI.quit
+        quit         - carapace.shell.pythonshell.CommandAPI.quit
         services     - data
         sys          - sys
 
 If you opt for the 'echo' shell::
 
-    $ twistd dreamssh --interpreter=echo
+    $ twistd carapace --interpreter=echo
 
 Then executing any command will looks something like this::
 
