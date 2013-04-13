@@ -140,6 +140,9 @@ convenience make targets that mirror the above functionality::
 Using
 =====
 
+Provided Python Shell
+---------------------
+
 When you log into the Python shell::
 
     $ twistd carapace shell
@@ -192,6 +195,35 @@ Then executing any command will looks something like this::
 
 The echo shell is intended to provide insight or a starting point for
 developers who want to implement their own shell their users can ssh into.
+
+Proivded Demo/Echo Shell
+------------------------
+
+When you log into the demo echo shell::
+
+    $ twistd carapace --interpreter=echo
+
+You are greeted instead with this::
+
+    :>>
+    :
+    : Welcome to
+    :_________
+    :\_   ___ \_____ ____________  ______   ____  ____
+    :/    \  \/\__  \\_  __ \__  \ \____ \_/ ___\/ __ \
+    :\     \____/ __ \|  | \// __ \|  |_> >  \__\  ___/
+    : \______  (____  /__|  (____  /   __/ \___  >___  >
+    :         \/     \/           \/|__|        \/    \/
+    :
+    : You have logged into a Carapace SSH Server.
+    : This shell has no commands; it simply returns what you type.
+    :
+    : Enjoy!
+    :
+    :>> see, no commands!
+    input = see, no commands!, filename = <console>
+    :>>
+
 
 Configuring
 ===========
