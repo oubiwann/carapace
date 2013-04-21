@@ -13,8 +13,8 @@ class Script(object):
     """
     """
     def __init__(self):
-        self.run()
         self.config = registry.getConfig()
+        self.run()
 
     def run(self):
         raise NotImplementedError()
@@ -69,6 +69,7 @@ class GenerateConfig(Script):
     def backupConfig(self, src):
         timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
         dest = FilePath("%s.%s" % (src.path, timestamp))
+        print "\tBacked up existing config to %s." % dest.path
         # if something goes wrong with the setContent call, don't remove the
         # source!
         try:
@@ -86,6 +87,7 @@ class GenerateConfig(Script):
             self.backupConfig(filePath)
         # write the new config
         configurator.writeDefaults()
+        print "\tWrote new config file to %s." % filePath.path
 
 
 class ImportKeys(Script):

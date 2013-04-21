@@ -21,7 +21,8 @@ stop:
 	@python -c "from carapace import app;from carapace.sdk import scripts;scripts.StopDaemon()"
 
 generate-config:
-	python -c "from carapace import app;from carapace.sdk import scripts;scripts.GenerateConfig();"
+	@echo "Generating config..."
+	@python -c "from carapace import app;from carapace.sdk import scripts;scripts.GenerateConfig();"
 
 import-keys: GAME_USER ?= 
 import-keys: LP_USER ?=
