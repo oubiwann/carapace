@@ -1,6 +1,6 @@
 display_name = "Carapace"
 library_name = "carapace"
-version = "0.3-dev"
+version = "0.3.1"
 author = "Duncan McGreggor"
 author_email = "duncan@cogitat.io"
 license = "MIT"
