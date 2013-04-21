@@ -9,14 +9,12 @@ from twisted.web import client
 from carapace.sdk import registry
 
 
-config = registry.getConfig()
-
-
 class Script(object):
     """
     """
     def __init__(self):
         self.run()
+        self.config = registry.getConfig()
 
     def run(self):
         raise NotImplementedError()
@@ -26,7 +24,7 @@ class KeyGen(Script):
     """
     """
     def run(self):
-        path = config.ssh.keydir
+        path = self.config.ssh.keydir
         key = os.path.join(path, "id_rsa")
         if not os.path.exists(path):
             print "Creating SSH key dir '%s' ..." % path
@@ -46,20 +44,21 @@ class ConnectToShell(Script):
     """
     """
     def run(self):
-        print "Connecting to %s ..." % config.ssh.servicename
-        subprocess.call(["ssh",  "-p %s" % config.ssh.port,  config.ssh.ip])
+        print "Connecting to %s ..." % self.config.ssh.servicename
+        subprocess.call(
+            ["ssh",  "-p %s" % self.config.ssh.port,  self.config.ssh.ip])
 
 
 class StopDaemon(Script):
     """
     """
     def run(self):
-        print "Stopping %s ..." % config.ssh.servicename
-        if not os.path.exists(config.ssh.pidfile):
+        print "Stopping %s ..." % self.config.ssh.servicename
+        if not os.path.exists(self.config.ssh.pidfile):
             print "Could not find the server's PID file ..."
             print "Aborting."
         else:
-            pid = open(config.ssh.pidfile).read()
+            pid = open(self.config.ssh.pidfile).read()
             subprocess.call(["kill", pid])
             print "Stopped."
 
@@ -80,7 +79,7 @@ class GenerateConfig(Script):
 
     def run(self):
         # get config file path
-        configurator = config.configuratorFactory()
+        configurator = self.config.configuratorFactory()
         filePath = FilePath(configurator.getConfigFile())
         # check to see if it exists, and if so, back it up
         if filePath.exists():
@@ -105,12 +104,12 @@ class ImportKeys(Script):
         reactor.stop()
 
     def createDirs(self):
-        userDir = FilePath(config.ssh.userdirtemplate % self.username)
+        userDir = FilePath(self.config.ssh.userdirtemplate % self.username)
         if not userDir.exists():
             userDir.makedirs()
 
     def getAuthKeys(self):
-        authKeys = FilePath(config.ssh.userauthkeys % self.username)
+        authKeys = FilePath(self.config.ssh.userauthkeys % self.username)
         data = None
         if authKeys.exists():
             data = authKeys.open()
