@@ -10,7 +10,7 @@ class Error(Exception):
 
 class MissingSSHServerKeysError(Error):
     """
-    SSH server keys not found. Generate them with 'twistd carapace keygen'
+    SSH server keys not found. Generate them with 'twistd <plugin-name> keygen'
     """
 
 
